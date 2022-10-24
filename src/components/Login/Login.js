@@ -1,22 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+
+        console.log(email, password)
+    }
+
     return (
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto mt-4 lg:mt-24">
             <h1 className="text-2xl font-bold text-center">Login</h1>
-            <form novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+            <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-1 text-sm">
-                    <label for="username" className="block text-gray-400">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
+                    <label htmlFor="username" className="block dark:text-gray-400">Email</label>
+                    <input type="text" name="email" id="username" placeholder="Enter Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
-                    <label for="password" className="block text-gray-400">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
+                    <label htmlFor="password" className="block dark:text-gray-400">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
                     <div className="flex justify-end text-xs text-gray-400">
-                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                        <Link to="#">Forgot Password?</Link>
                     </div>
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Sign in</button>
+                <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-violet-700">Sign in</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -41,7 +53,7 @@ const Login = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 text-gray-400">Don't have an account?
-                <a rel="noopener noreferrer" href="#" className="underline text-gray-100">Sign up</a>
+                <Link rel="noopener noreferrer" to="/register" className="underline text-gray-100 ml-2">Register</Link>
             </p>
         </div>
     );
