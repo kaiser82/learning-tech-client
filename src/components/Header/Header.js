@@ -3,8 +3,15 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import logo from '../../assets/pictures/logo.png'
+import { useState } from 'react';
 
 const Header = () => {
+    const [toggle, setToggle] = useState(true)
+    console.log(toggle)
+
+    const handleDarkMode = (event) => {
+        setToggle(!event.target.checked)
+    }
 
     const { user, logOut } = useContext(AuthContext)
     return (
@@ -33,6 +40,12 @@ const Header = () => {
                     <li><Link to='/blog'>FAQ</Link></li>
                 </ul>
             </div>
+            <div className="form-control hidden lg:flex ">
+                <label className="label cursor-pointer space-x-1">
+                    <span className="label-text text-white"> Darkmode</span>
+                    <input onChange={handleDarkMode} type="checkbox" className="toggle" checked={!toggle} />
+                </label>
+            </div>
             <div className="navbar-end space-x-5 ">
                 <p className='hidden lg:block'>
                     {
@@ -51,6 +64,7 @@ const Header = () => {
                 }
             </div>
             <div className="navbar-end">
+
                 {
                     user ? <button onClick={() => { logOut() }} className='btn'>Logout</button>
                         :
