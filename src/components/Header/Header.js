@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const Header = () => {
     const [toggle, setToggle] = useState(true)
-    console.log(toggle)
+
 
     const handleDarkMode = (event) => {
         setToggle(!event.target.checked)
