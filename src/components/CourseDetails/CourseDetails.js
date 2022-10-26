@@ -56,7 +56,7 @@ const CourseDetails = () => {
                         </p>
                     </div>
                     <div className='flex justify-evenly pt-5  align-center'>
-                        <button className='btn btn-primary '> <Link to={`/detail/${id}`} detail={courseDetails}>Get Premium access</Link> </button>
+                        <button className='btn btn-primary '> <Link to={`/detail/${id}`}>Get Premium access</Link> </button>
                     </div>
                 </div>
             </article>
