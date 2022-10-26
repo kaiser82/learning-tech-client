@@ -11,17 +11,24 @@ const CheckOut = () => {
     // console.log(user)
     return (
         <div className='lg:w-9/12 mx-auto mt-5 lg:mt-20'>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card lg:card-side  shadow-xl bg-gray-900 text-gray-100">
                 <figure><img src={titlePic} alt="Album" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">Course Title: {courseTitle}</h2>
+                    <h2 className="card-title font-bold  text-green-400">Course Title: {courseTitle}</h2>
                     <div>
-                        <p>Course Instructor: <span className='text-primary font-semibold'>{instructor}</span></p>
-                        <p>Course fee: <span className='text-primary font-semibold'>{price}</span></p>
+                        <p>Course Instructor: <span className='text-accent font-semibold'>{instructor}</span></p>
+                        <p>Course fee: <span className='text-accent font-semibold'>{price}</span></p>
                     </div>
 
-                    <div className="card-actions justify-start">
-                        <p>Congratulation! <span className='text-primary font-semibold'>{user?.displayName}</span>, you have successfully enrolled to this course.</p>
+                    <div className="card-actions justify-start pt-4">
+                        <div className='flex space-x-4'>
+                            <div className="avatar">
+                                <div className="w-20 rounded-xl ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src={user?.photoURL} alt="" />
+                                </div>
+                            </div>
+                            <p>Congratulation! <span className='text-accent font-semibold'>{user?.displayName}</span>, you have successfully enrolled to this course.</p>
+                        </div>
                     </div>
                 </div>
             </div>
