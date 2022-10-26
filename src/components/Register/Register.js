@@ -20,17 +20,25 @@ const Register = () => {
         const password = form.password.value;
         const passwordConfirm = form.passwordConfirm.value;
 
-        createUser(email, password)
-            .then(res => {
-                const user = res.user;
-                toast.success("User created successfully.")
-                console.log(user);
-                form.reset();
-                handleUpdateUserProfile(name, picture);
-                handleEmailVerification()
-                navigate('/');
-            })
-            .catch(e => console.log(e.message))
+        if (password !== passwordConfirm) {
+            toast.error("Password doesn't match!");
+            return;
+        }
+        else {
+            createUser(email, password)
+                .then(res => {
+                    const user = res.user;
+                    toast.success("Congratulation! Registration successful.")
+                    console.log(user);
+                    form.reset();
+                    handleUpdateUserProfile(name, picture);
+                    handleEmailVerification()
+                    navigate('/');
+                })
+                .catch(e => toast.error(e.message))
+        }
+
+
     }
 
     const handleUpdateUserProfile = (name, picture) => {
