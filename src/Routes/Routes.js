@@ -15,7 +15,7 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -50,9 +50,6 @@ export const routes = createBrowserRouter([
             },
         ],
     },
-    {
-        path: '*',
-        element: <ErrorPage></ErrorPage>
-    }
+
 
 ])
