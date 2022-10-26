@@ -7,12 +7,12 @@ const Courses = () => {
     console.log(categories);
     return (
         <div>
-            <h2>All Courses: {categories.length}</h2>
-            <Link to="/courseDetails"><button className='btn btn-primary'>Course details</button></Link>
-            <div className="grid sm:grid-cols-1 lg:grid-cols-4 gap-4 ">
+
+
+            <div className="  grid grid-cols-1 lg:grid-cols-4 sm:m-2 md:gap-4  ">
                 {/* left side */}
-                <div className=''>
-                    <aside className="w-full lg:w-11/12 p-6  bg-gray-900 text-gray-100 mx-auto rounded-lg sticky top-0">
+                <div className='w-full mb-4'>
+                    <aside className="w-full lg:w-11/12 p-6  bg-gray-900 text-gray-100 mx-auto rounded-lg sticky top-0 lg:h-screen">
                         <nav className="space-y-8 text-md">
                             <div className="space-y-2">
                                 <h2 className="text-lg font-semibold tracking-widest uppercase text-gray-400">Our Courses</h2>

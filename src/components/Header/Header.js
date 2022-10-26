@@ -15,7 +15,7 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext)
     return (
-        <div className="navbar bg-gray-800 text-neutral-content lg:px-20">
+        <div className="navbar bg-gray-800 text-neutral-content lg:px-20 mb-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -70,7 +70,7 @@ const Header = () => {
                         :
                         <div className='space-x-5'>
                             <Link to='/login' className="btn">Login</Link>
-                            <Link to='/register' className="btn">Register</Link>
+                            {/* <Link to='/register' className="btn">Register</Link> */}
                         </div>
                 }
             </div>
