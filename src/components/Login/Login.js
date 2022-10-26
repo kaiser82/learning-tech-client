@@ -68,7 +68,7 @@ const Login = () => {
     }
 
     return (
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto mt-4 lg:mt-24">
+        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto my-4 lg:my-20">
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-1 text-sm">

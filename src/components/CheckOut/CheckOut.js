@@ -10,8 +10,8 @@ const CheckOut = () => {
     console.log(detail, user)
     // console.log(user)
     return (
-        <div className='lg:w-9/12 mx-auto mt-5 lg:mt-20'>
-            <div className="card lg:card-side  shadow-xl bg-gray-900 text-gray-100">
+        <div className='lg:w-9/12 mx-auto  my-5 lg:my-36'>
+            <div className="card md:card-side  shadow-xl bg-gray-900 text-gray-100">
                 <figure><img src={titlePic} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold  text-green-400">Course Title: {courseTitle}</h2>

@@ -6,13 +6,12 @@ const Courses = () => {
     const categories = useLoaderData();
     console.log(categories);
     return (
-        <div>
+        <div className='my-4'>
 
-
-            <div className="  grid grid-cols-1 lg:grid-cols-4 sm:m-2 md:gap-4  ">
+            <div className="  grid grid-cols-1 md:grid-cols-4 sm:m-2 md:gap-2  ">
                 {/* left side */}
-                <div className='w-full mb-4'>
-                    <aside className="w-full lg:w-11/12 p-6  bg-gray-900 text-gray-100 mx-auto rounded-lg sticky top-0 lg:h-screen">
+                <div className='w-full mb-4 md:mb-0'>
+                    <aside className="w-full lg:w-11/12 p-6  bg-gray-900 text-gray-100 mx-auto rounded-lg sticky top-0 md:h-screen">
                         <nav className="space-y-8 text-md">
                             <div className="space-y-2">
                                 <h2 className="text-lg font-semibold tracking-widest uppercase text-gray-400">Our Courses</h2>
