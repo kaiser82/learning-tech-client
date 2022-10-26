@@ -1,14 +1,22 @@
+
 import React from 'react';
 import { FaClock, FaEye, FaMoneyBillAlt, FaStar } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+
 
 const CourseDetails = () => {
     const courseDetails = useLoaderData()
-    const { courseTitle, description, instructor, instructorPic, price, titlePic, review, duration, ratings } = courseDetails
+    const { id, courseTitle, description, instructor, instructorPic, price, titlePic, review, duration, ratings } = courseDetails
     console.log(courseDetails)
+    console.log(id)
     return (
         <div className='my-2'>
-            <article className="max-w-2xl px-6 py-24 mx-auto space-y-12 bg-gray-800 text-gray-50">
+            <article className="max-w-2xl px-6 py-20 mx-auto space-y-12 bg-gray-800 text-gray-50">
+
+                <div className='text-right'>
+                    <button className='btn'>Download PDF</button>
+                </div>
+
                 <div className="w-full mx-auto space-y-4 text-center">
                     <img src={titlePic} alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
                     <h1 className="text-4xl font-bold leading-tight md:text-5xl">{courseTitle}</h1>
@@ -46,6 +54,9 @@ const CourseDetails = () => {
                             <span><FaClock /></span>
                             <span>{duration}</span>
                         </p>
+                    </div>
+                    <div className='flex justify-evenly pt-5  align-center'>
+                        <button className='btn btn-primary '> <Link to={`/detail/${id}`} detail={courseDetails}>Get Premium access</Link> </button>
                     </div>
                 </div>
             </article>

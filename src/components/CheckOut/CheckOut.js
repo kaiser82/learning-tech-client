@@ -1,6 +1,7 @@
 import React from 'react';
 
-const CheckOut = () => {
+const CheckOut = ({ user }) => {
+    console.log(user)
     return (
         <div>
             <h2>Check out page</h2>
