@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaClock, FaEye, FaMoneyBillAlt, FaStar } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
@@ -11,7 +12,7 @@ const CourseDetails = () => {
                 <div className="w-full mx-auto space-y-4 text-center">
                     <img src={titlePic} alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
                     <h1 className="text-4xl font-bold leading-tight md:text-5xl">{courseTitle}</h1>
-                    <p className="text-sm text-gray-400">by Insturctor:
+                    <p className="text-sm text-gray-400">by Instructor:
                         <span className="underline text-violet-400 px-1">
                             {instructor}
                         </span>
@@ -29,18 +30,21 @@ const CourseDetails = () => {
                             <p className="text-gray-400">Course Instructor</p>
                         </div>
                     </div>
-                    <div className="flex justify-center pt-4 space-x-4 align-center">
-                        <p>
-                            <span>Rating: {ratings}</span>
+                    <div className="flex justify-evenly pt-4 space-x-4 align-center">
+                        <p className='flex justify-center items-center space-x-2'>
+                            <span><FaStar /></span><span>{ratings}</span>
                         </p>
-                        <p>
-                            <span>Review: {review}</span>
+                        <p className='flex justify-center items-center space-x-2'>
+                            <span><FaEye /></span>
+                            <span>{review}</span>
                         </p>
-                        <p>
-                            <span>Price: {price}</span>
+                        <p className='flex justify-center items-center space-x-2'>
+                            <span><FaMoneyBillAlt /></span>
+                            <span>{price}</span>
                         </p>
-                        <p>
-                            <span>Duration: {duration}</span>
+                        <p className='flex justify-center items-center space-x-2'>
+                            <span><FaClock /></span>
+                            <span>{duration}</span>
                         </p>
                     </div>
                 </div>
