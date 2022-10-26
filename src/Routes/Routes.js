@@ -24,12 +24,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/categories')
+                loader: () => fetch('https://b610-lerning-platform-server-side-kaiser82-kaiser82.vercel.app/categories')
             },
             {
                 path: '/category/:id',
                 element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-kaiser82-kaiser82.vercel.app/category/${params.id}`)
             },
             {
                 path: '/checkout',
