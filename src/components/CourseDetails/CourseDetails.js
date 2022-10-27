@@ -8,7 +8,7 @@ import PdfDoc from '../PdfDoc/PdfDoc';
 const CourseDetails = () => {
     const courseDetails = useLoaderData()
     const { id, courseTitle, description, instructor, instructorPic, price, titlePic, review, duration, ratings } = courseDetails
-    console.log(courseDetails)
+    // console.log(courseDetails)
 
     return (
         <div className='my-2'>

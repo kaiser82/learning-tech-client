@@ -42,7 +42,7 @@ const Header = () => {
             </div>
             <div className="form-control hidden lg:flex ">
                 <label className="label cursor-pointer space-x-1">
-                    <span className="label-text text-white"> Darkmode</span>
+                    <span className="label-text text-white"> {toggle ? "Darkmode" : "Lightmode"}</span>
                     <input onChange={handleDarkMode} type="checkbox" className="toggle" checked={!toggle} />
                 </label>
             </div>
@@ -56,7 +56,7 @@ const Header = () => {
                     user?.photoURL &&
                     <div className="tooltip  tooltip-right" data-tip={user?.displayName}>
                         <div className="avatar p-1">
-                            <div className="w-8 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <div className="w-8 lg:w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                 <img src={user.photoURL} alt="profilePic" />
                             </div>
                         </div>

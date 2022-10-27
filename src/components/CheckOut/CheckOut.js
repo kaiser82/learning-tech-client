@@ -7,8 +7,7 @@ const CheckOut = () => {
     const { user } = useContext(AuthContext)
     const detail = useLoaderData();
     const { courseTitle, titlePic, price, instructor, duration } = detail
-    console.log(detail, user)
-    // console.log(user)
+    // console.log(detail, user)
     return (
         <div className='lg:w-9/12 mx-auto  my-5 lg:my-36'>
             <div className="card md:card-side  shadow-xl bg-gray-900 text-gray-100">
