@@ -2,19 +2,20 @@
 import React from 'react';
 import { FaClock, FaEye, FaMoneyBillAlt, FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import PdfDoc from '../PdfDoc/PdfDoc';
 
 
 const CourseDetails = () => {
     const courseDetails = useLoaderData()
     const { id, courseTitle, description, instructor, instructorPic, price, titlePic, review, duration, ratings } = courseDetails
     console.log(courseDetails)
-    console.log(id)
+
     return (
         <div className='my-2'>
             <article className="max-w-2xl px-6 py-20 mx-auto space-y-12 bg-gray-800 text-gray-50">
 
                 <div className='text-right'>
-                    <button className='btn'>Download PDF</button>
+                    <PdfDoc courseDetails={courseDetails} />
                 </div>
 
                 <div className="w-full mx-auto space-y-4 text-center">

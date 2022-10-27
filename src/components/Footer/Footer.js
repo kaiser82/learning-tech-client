@@ -33,10 +33,10 @@ const Footer = () => {
                         <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
                         <ul className="space-y-1">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Privacy</a>
+                                <Link to="#">Privacy</Link>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="#">Terms of Service</a>
+                                <Link to="#">Terms of Service</Link>
                             </li>
                         </ul>
                     </div>
@@ -44,13 +44,13 @@ const Footer = () => {
                         <h3 className="uppercase text-gray-50">Developers</h3>
                         <ul className="space-y-1">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Public API</a>
+                                <Link to="#">Public API</Link>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="#">Documentation</a>
+                                <Link to="#">Documentation</Link>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="#">Guides</a>
+                                <Link to="#">Guides</Link>
                             </li>
                         </ul>
                     </div>
