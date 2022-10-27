@@ -53,7 +53,7 @@ const CourseDetails = () => {
                         </p>
                         <p className='flex justify-center items-center space-x-2'>
                             <span><FaClock /></span>
-                            <span>{duration}</span>
+                            <span>{duration} weeks</span>
                         </p>
                     </div>
                     <div className='flex justify-evenly pt-5  align-center'>

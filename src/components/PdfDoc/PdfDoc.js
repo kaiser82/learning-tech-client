@@ -1,5 +1,6 @@
 import React from 'react';
 import jsPDF from 'jspdf';
+import { FaFilePdf } from 'react-icons/fa';
 
 const PdfDoc = ({ courseDetails }) => {
     console.log(courseDetails)
@@ -21,7 +22,7 @@ const PdfDoc = ({ courseDetails }) => {
     }
     return (
         <div>
-            <button onClick={pdfGenerate} className="btn" >Download PDF</button>
+            <button onClick={pdfGenerate} className="btn btn-outline btn-info" ><FaFilePdf className='text-xl mr-3' /> Download PDF</button>
         </div>
     );
 };

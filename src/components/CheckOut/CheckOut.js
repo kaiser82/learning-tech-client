@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 const CheckOut = () => {
     const { user } = useContext(AuthContext)
     const detail = useLoaderData();
-    const { courseTitle, titlePic, price, instructor } = detail
+    const { courseTitle, titlePic, price, instructor, duration } = detail
     console.log(detail, user)
     // console.log(user)
     return (
@@ -18,6 +18,7 @@ const CheckOut = () => {
                     <div>
                         <p>Course Instructor: <span className='text-accent font-semibold'>{instructor}</span></p>
                         <p>Course fee: <span className='text-accent font-semibold'>{price}</span></p>
+                        <p>Course duration: <span className='text-accent font-semibold'>{duration} weeks</span></p>
                     </div>
 
                     <div className="card-actions justify-start pt-4">
