@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='lg:w-9/12 mx-auto space-y-10 bg-gray-200 p-3 rounded-lg'>
-            <h2 className='text-4xl font-bold text-center uppercase py-5'>Welcome to My Awesome Blog</h2>
+            <h2 className='text-4xl font-bold text-center uppercase py-5 text-gray-900'>Welcome to My Awesome Blog</h2>
             {/* card */}
             <div className="card w-100 bg-base-100 shadow-xl">
                 <div className="card-body">

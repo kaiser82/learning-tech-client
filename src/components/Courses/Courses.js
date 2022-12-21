@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 
 const Courses = () => {
     const categories = useLoaderData();
-    // console.log(categories);
+
     return (
         <div className='my-4'>
 
