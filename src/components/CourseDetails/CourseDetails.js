@@ -12,7 +12,7 @@ const CourseDetails = () => {
 
     return (
         <div className='my-2'>
-            <article className="max-w-2xl px-6 py-20 mx-auto space-y-12 bg-gray-800 text-gray-50">
+            <article className="max-w-2xl px-6 py-10 mx-auto space-y-12 bg-gray-800 text-gray-50">
 
                 <div className='text-right'>
                     <PdfDoc courseDetails={courseDetails} />
@@ -31,8 +31,8 @@ const CourseDetails = () => {
                 <div className="text-gray-100">
                     <p>{description}</p>
                 </div>
-                <div className="pt-12 border-t border-gray-700">
-                    <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row items-center justify-center">
+                <div className="pt-10 border-t border-gray-700">
+                    <div className="flex flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:flex-row items-center justify-center">
                         <img src={instructorPic} alt="" className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start bg-gray-500 border-gray-700" />
                         <div className="flex flex-col">
                             <h4 className="text-lg font-semibold">{instructor}</h4>

@@ -73,16 +73,16 @@ const Login = () => {
             <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-1 text-sm">
                     <label htmlFor="username" className="block dark:text-gray-400">Email</label>
-                    <input type="text" name="email" id="username" placeholder="Enter Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
+                    <input type="text" name="email" id="username" placeholder="Enter Email" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-400">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
+                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:border-violet-400" />
                     <div className="flex justify-end text-xs text-gray-400">
                         <Link to="#">Forgot Password?</Link>
                     </div>
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-violet-700">Sign in</button>
+                <button className="block w-full p-3 text-center rounded-md  bg-violet-700">Sign in</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -107,7 +107,7 @@ const Login = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 text-gray-400">Don't have an account?
-                <Link rel="noopener noreferrer" to="/register" className="underline text-gray-100 ml-2">Register</Link>
+                <Link to="/register" className="underline text-purple-200 ml-2">Register</Link>
             </p>
         </div>
     );

@@ -8,14 +8,13 @@ import { useState } from 'react';
 const Header = () => {
     const [toggle, setToggle] = useState(true)
 
-
     const handleDarkMode = (event) => {
         setToggle(!event.target.checked)
     }
 
     const { user, logOut } = useContext(AuthContext)
     return (
-        <div className="navbar bg-gray-800 text-neutral-content lg:px-20 ">
+        <div className="navbar bg-gray-800 text-gray-100 px-5 lg:px-20 py-1">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost md:hidden">
@@ -27,7 +26,7 @@ const Header = () => {
                         <li><Link to='blog'>FAQ</Link></li>
                     </ul>
                 </div>
-                <div className='w-12'>
+                <div className='w-12 hidden lg:block'>
                     <img src={logo} alt="" />
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl">Learning Tech</Link>
@@ -64,7 +63,6 @@ const Header = () => {
                 }
             </div>
             <div className="navbar-end">
-
                 {
                     user ? <button onClick={() => { logOut() }} className='btn'>Logout</button>
                         :
@@ -74,7 +72,6 @@ const Header = () => {
                         </div>
                 }
             </div>
-
         </div>
     );
 };

@@ -93,25 +93,25 @@ const Register = () => {
             <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-1 text-sm">
                     <label htmlFor="name" className="block dark:text-gray-400">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Full Name" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:dark:border-violet-400" />
+                    <input type="text" name="name" id="name" placeholder="Full Name" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:dark:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="picture" className="block dark:text-gray-400">Profile Picture</label>
-                    <input type="text" name="picture" id="picture" placeholder="Picture URL" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-gray-900 focus:dark:border-violet-400" />
+                    <input type="text" name="picture" id="picture" placeholder="Picture URL" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:dark:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="email" className="block dark:text-gray-400">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Enter Email" className="w-full px-4 py-3 rounded-md border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
+                    <input type="text" name="email" id="email" placeholder="Enter Email" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-400">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
+                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  text-gray-900 focus:border-violet-400" />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block dark:text-gray-400">Confirm Password</label>
-                    <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 dark:bg-gray-900 text-gray-900 focus:border-violet-400" />
+                    <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700  text-gray-900 focus:border-violet-400" />
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-violet-700">Register</button>
+                <button className="block w-full p-3 text-center rounded-md  bg-violet-700">Register</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -136,7 +136,7 @@ const Register = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 text-gray-400">Already have an account?
-                <Link to="/login" className="underline text-gray-100 ml-2">Sign in</Link>
+                <Link to="/login" className="underline text-purple-300 ml-2">Sign in</Link>
             </p>
         </div>
     );
